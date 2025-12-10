@@ -5,7 +5,7 @@
         <div class="row">
             <!--<div class="col-12">
                @include('layouts.navbars.guest.navbar')
-            </div>--->
+            </div>-->
         </div>
     </div>
     <main class="main-content  mt-0">
@@ -57,7 +57,7 @@
                         <div
                             class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
                             <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden"
-                                style="background-image: url('https://inversiones-argon.test/img/signin-ill.jpg');
+                                style="background-image: url('https://llaves.solbintec.com/img/signin-ill.jpg');
               background-size: cover; ">
 <!--style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signin-ill.jpg');-->
                                 <span class="mask bg-gradient-success opacity-4"></span>
