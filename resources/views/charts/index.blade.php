@@ -6,7 +6,7 @@
         <div class="col-xl-4 col-lg-5">
             <div class="card">
 
-                {{-- Tabs Social / Signals --}}
+                {{-- ================== TABS SOCIAL / SIGNALS ================== --}}
                 <div class="card-header pb-0 border-0">
                     <ul class="nav nav-pills nav-fill" id="socialTabs" role="tablist">
                         <li class="nav-item" role="presentation">
@@ -27,7 +27,7 @@
                 <div class="card-body pt-2">
                     <div class="tab-content" id="socialTabsContent">
 
-                        {{-- =============== PANE SOCIAL ================= --}}
+                        {{-- =============== TAB SOCIAL ================= --}}
                         <div class="tab-pane fade show active" id="pane-social" role="tabpanel">
 
                             {{-- Buscador + Join --}}
@@ -37,84 +37,129 @@
                                         <i class="fas fa-search"></i>
                                     </span>
                                     <input type="text" id="socialSearch" class="form-control border-start-0"
-                                           placeholder="Search traders">
+                                           placeholder="Search">
                                 </div>
                                 <button class="btn btn-success ms-2 px-3">
                                     Join
                                 </button>
                             </div>
 
-                            {{-- Pills Top ranked / Spotlight --}}
+                            {{-- Botones Top ranked / Spotlight --}}
                             <div class="d-flex mb-3">
                                 <div class="btn-group btn-group-sm" role="group">
-                                    <button type="button" class="btn btn-outline-primary active social-filter-btn"
-                                            data-filter="top">
+                                    <button type="button"
+                                            class="btn btn-outline-primary active"
+                                            id="btnTopRanked">
                                         Top ranked
                                     </button>
-                                    <button type="button" class="btn btn-outline-primary social-filter-btn"
-                                            data-filter="spotlight">
+                                    <button type="button"
+                                            class="btn btn-outline-primary"
+                                            id="btnSpotlight">
                                         Spotlight
                                     </button>
                                 </div>
+
+                                {{-- iconito (opcional) --}}
+                                <button class="btn btn-link ms-auto p-0">
+                                    <i class="fas fa-sync-alt"></i>
+                                </button>
                             </div>
 
-                            {{-- Tabla de traders --}}
                             @php
+                                // ====== DATA DEMO TRADERS (lista Top ranked) ======
                                 $traders = [
+                                    [ 'name' => 'Fawcett500',    'pl' => 72,  'copiers' => 3 ],
+                                    [ 'name' => 'Alili123',      'pl' => 60,  'copiers' => 0 ],
+                                    [ 'name' => 'Sweetcheeks',   'pl' => 59,  'copiers' => 0 ],
+                                    [ 'name' => 'lopojmnccdrry', 'pl' => 49,  'copiers' => 0 ],
+                                    [ 'name' => 'ChesterfieldUK','pl' => 123, 'copiers' => 1 ],
+                                ];
+
+                                // ====== DATA DEMO SPOTLIGHT ======
+                                $spot = [
+                                    'name'       => 'Mohammed123456',
+                                    'pl_1m'      => 647.8,
+                                    'monthly_pl' => 'Top 5',
+                                    'copiers'    => 44,
+                                ];
+
+                                // ====== DATA DEMO SOCIAL STREAM ======
+                                $stream = [
                                     [
-            'name'       => 'Gumamela',
-            'pl'         => 30.46,   // P/L 1M
-            'pl_3m'      => 82.10,
-            'pl_6m'      => 145.32,
-            'copiers'    => 591,
-            'risk'       => 'Medium',
-            'country'    => 'PH',    // código país (PH, US, MX...)
-            'avatarColor'=> '#a855f7',
-        ],
-        [
-            'name'       => 'Fawcett500',
-            'pl'         => 72,
-            'pl_3m'      => 110,
-            'pl_6m'      => 180,
-            'copiers'    => 3,
-            'risk'       => 'Low',
-            'country'    => 'US',
-            'avatarColor'=> '#f97316',
-        ],
+                                        'trader'  => 'Alisabbahp',
+                                        'text'    => 'opened a XAUUSD buy position at 4,211.79',
+                                        'status'  => 'Earning 1.84%',
+                                        'type'    => 'success',
+                                        'time'    => 'now',
+                                    ],
+                                    [
+                                        'trader'  => 'Powerchina',
+                                        'text'    => 'opened a BTCUSD sell position at 91,500',
+                                        'status'  => 'Earning 0.95%',
+                                        'type'    => 'success',
+                                        'time'    => '23 seconds ago',
+                                    ],
+                                    [
+                                        'trader'  => 'mimorami',
+                                        'text'    => 'opened a XAUUSD buy position at 4,211',
+                                        'status'  => 'Earning 1.63%',
+                                        'type'    => 'success',
+                                        'time'    => '49 seconds ago',
+                                    ],
+                                    [
+                                        'trader'  => 'mimorami',
+                                        'text'    => 'opened a XAUUSD buy position at 4,209.63',
+                                        'status'  => 'Earning 0.80%',
+                                        'type'    => 'success',
+                                        'time'    => '3 minutes ago',
+                                    ],
+                                    [
+                                        'trader'  => 'Alisabbahp',
+                                        'text'    => 'opened a XAUUSD buy position at 4,210',
+                                        'status'  => 'Loss -0.32%',
+                                        'type'    => 'danger',
+                                        'time'    => '4 minutes ago',
+                                    ],
                                 ];
                             @endphp
 
-                            <div class="mb-3">
+                            {{-- ================== CONTENEDOR TOP RANKED (LISTA) ================== --}}
+                            <div id="topRankedContainer">
                                 <div class="d-flex px-2 mb-1 text-muted small">
                                     <div class="flex-grow-1">Name</div>
                                     <div class="text-center" style="width: 80px;">P/L (%)</div>
                                     <div class="text-center" style="width: 70px;">Copiers</div>
                                 </div>
-                                <div id="tradersList" style="max-height: 260px; overflow-y: auto;">
+
+                                <div id="tradersList" style="max-height: 220px; overflow-y:auto;">
                                     @foreach ($traders as $t)
-                                        <div class="d-flex align-items-center py-2 px-2 rounded-3 mb-1 trader-row"
-     data-name="{{ strtolower($t['name']) }}"
-     data-copiers="{{ $t['copiers'] }}"
-     data-pl="{{ $t['pl'] }}"
-     data-pl3m="{{ $t['pl_3m'] }}"
-     data-pl6m="{{ $t['pl_6m'] }}"
-     data-risk="{{ $t['risk'] }}"
-     data-country="{{ $t['country'] }}"
-     style="cursor:pointer;">
-                                            {{-- Avatar simple circular (puedes remplazar por imagen) --}}
+                                        <div class="d-flex align-items-center py-2 px-2 rounded-3 mb-1 bg-white trader-row"
+                                             data-name="{{ strtolower($t['name']) }}"
+                                             data-pl="{{ $t['pl'] }}"
+                                             data-copiers="{{ $t['copiers'] }}"
+                                             style="cursor:pointer;">
+                                            {{-- Avatar --}}
                                             <div class="me-2">
-                                                <div class="rounded-circle d-flex align-items-center justify-content-center"
-                                                     style="width:32px;height:32px;background-color: {{ $t['avatarColor'] }};color:#fff;font-weight:600;">
-                                                    {{ strtoupper(substr($t['name'],0,1)) }}
+                                                <div class="rounded-circle bg-warning d-flex align-items-center justify-content-center"
+                                                     style="width:32px;height:32px;">
+                                                    <span class="fw-bold text-white">
+                                                        {{ strtoupper(substr($t['name'],0,1)) }}
+                                                    </span>
                                                 </div>
                                             </div>
+
+                                            {{-- Nombre --}}
                                             <div class="flex-grow-1">
-                                                <div class="fw-semibold">{{ $t['name'] }}</div>
+                                                <div class="fw-semibold text-truncate">{{ $t['name'] }}</div>
                                             </div>
-                                            <div class="text-center" style="width: 80px;">
+
+                                            {{-- P/L --}}
+                                            <div class="text-center" style="width:80px;">
                                                 <span class="text-success fw-semibold">{{ $t['pl'] }}%</span>
                                             </div>
-                                            <div class="text-center" style="width: 70px;">
+
+                                            {{-- Copiers --}}
+                                            <div class="text-center" style="width:70px;">
                                                 <span class="badge bg-light text-dark">{{ $t['copiers'] }}</span>
                                             </div>
                                         </div>
@@ -122,9 +167,60 @@
                                 </div>
                             </div>
 
-                            {{-- Social stream --}}
+                            {{-- ================== CONTENEDOR SPOTLIGHT (TARJETA) ================== --}}
+                            <div id="spotlightContainer" class="d-none">
+                                <div class="card border-0 mb-2" style="background-color:#fffbea;">
+                                    <div class="card-body pb-2">
+                                        <div class="d-flex align-items-center mb-2">
+                                            {{-- Avatar grande --}}
+                                            <div class="me-2">
+                                                <div class="rounded-circle bg-warning d-flex align-items-center justify-content-center"
+                                                     style="width:40px;height:40px;">
+                                                    <span class="fw-bold text-white">
+                                                        {{ strtoupper(substr($spot['name'],0,1)) }}
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-0 fw-bold" id="spotName">{{ $spot['name'] }}</h6>
+                                                <div class="text-muted small">
+                                                    <i class="fas fa-users"></i>
+                                                    <span id="spotCopiers">{{ $spot['copiers'] }}</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-muted small">
+                                                <i class="fas fa-sync-alt"></i>
+                                            </div>
+                                        </div>
+
+                                        {{-- “cuadro” vacío (como en tu captura) --}}
+                                        <div class="border rounded-3 mb-2" style="height:90px;background-color:#fff;">
+                                        </div>
+
+                                        {{-- Stats inferiores --}}
+                                        <div class="row text-center small mb-3">
+                                            <div class="col-6 border-end">
+                                                <div class="text-success">● P/L (1M)</div>
+                                                <div class="fw-bold" id="spotPl1m">{{ $spot['pl_1m'] }}%</div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="text-primary">● Monthly P/L</div>
+                                                <div class="fw-bold" id="spotMonthly">{{ $spot['monthly_pl'] }}</div>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn btn-primary w-100">
+                                            <i class="far fa-copy me-2"></i>Copy
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- ================== SOCIAL STREAM ================== --}}
                             <div class="mt-3">
-                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
                                     <h6 class="mb-0">Social stream</h6>
                                     <div class="dropdown">
                                         <button class="btn btn-outline-secondary btn-xs dropdown-toggle py-1 px-2"
@@ -132,60 +228,25 @@
                                                 aria-expanded="false">
                                             <small id="streamFilterLabel">All traders</small>
                                         </button>
-                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="streamFilterBtn">
-                                            <li><a class="dropdown-item stream-filter-option active"
-                                                   data-filter="all" href="#">All traders</a></li>
-                                            <li><a class="dropdown-item stream-filter-option"
-                                                   data-filter="profit" href="#">Profitable only</a></li>
+                                        <ul class="dropdown-menu dropdown-menu-end"
+                                            aria-labelledby="streamFilterBtn">
+                                            <li>
+                                                <a class="dropdown-item stream-filter-option active"
+                                                   href="#" data-filter="all">All traders</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item stream-filter-option"
+                                                   href="#" data-filter="profit">Profitable only</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
 
-                                @php
-                                    $stream = [
-                                        [
-                                            'trader' => 'Sms9286',
-                                            'text' => 'opened a XAUUSD buy position at 4,209.49',
-                                            'status' => 'Earning 1.81%',
-                                            'statusType' => 'success',
-                                            'minutes' => 5,
-                                        ],
-                                        [
-                                            'trader' => 'manoool',
-                                            'text' => 'opened a XAUUSD buy position at 4,210.28',
-                                            'status' => 'Earning 0.95%',
-                                            'statusType' => 'success',
-                                            'minutes' => 7,
-                                        ],
-                                        [
-                                            'trader' => 'Cyborgtrade',
-                                            'text' => 'placed a Sell limit order on USDJPY at 155.27',
-                                            'status' => 'Pending',
-                                            'statusType' => 'secondary',
-                                            'minutes' => 9,
-                                        ],
-                                        [
-                                            'trader' => 't117778899',
-                                            'text' => 'opened a AUDJPY sell position at 103.021',
-                                            'status' => 'Earning 0.45%',
-                                            'statusType' => 'success',
-                                            'minutes' => 12,
-                                        ],
-                                        [
-                                            'trader' => 'Ammamia',
-                                            'text' => 'opened a XAUUSD sell position at 4,208.02',
-                                            'status' => 'Loss -0.32%',
-                                            'statusType' => 'danger',
-                                            'minutes' => 16,
-                                        ],
-                                    ];
-                                @endphp
-
-                                <div id="socialStream" style="max-height: 260px; overflow-y:auto;">
+                                <div id="socialStream" style="max-height:280px; overflow-y:auto;">
                                     @foreach ($stream as $s)
                                         <div class="d-flex align-items-start py-2 px-2 mb-2 rounded-3 border stream-row"
                                              data-trader="{{ strtolower($s['trader']) }}"
-                                             data-type="{{ $s['statusType'] === 'success' ? 'profit' : 'other' }}">
+                                             data-type="{{ $s['type'] === 'success' ? 'profit' : 'other' }}">
                                             {{-- Avatar --}}
                                             <div class="me-2">
                                                 <div class="rounded-circle bg-light d-flex align-items-center justify-content-center"
@@ -198,11 +259,11 @@
                                                     <strong>{{ $s['trader'] }}</strong> {{ $s['text'] }}
                                                 </div>
                                                 <div class="d-flex align-items-center mt-1">
-                                                    <span class="badge bg-{{ $s['statusType'] }} me-2">
+                                                    <span class="badge bg-{{ $s['type'] }} me-2">
                                                         {{ $s['status'] }}
                                                     </span>
                                                     <span class="text-muted small">
-                                                        {{ $s['minutes'] }} minutes ago
+                                                        {{ $s['time'] }}
                                                     </span>
                                                 </div>
                                             </div>
@@ -216,10 +277,10 @@
 
                         </div>
 
-                        {{-- =============== PANE SIGNALS (placeholder) ================= --}}
+                        {{-- =============== TAB SIGNALS (placeholder) ================= --}}
                         <div class="tab-pane fade" id="pane-signals" role="tabpanel">
                             <p class="text-muted small mb-0">
-                                Aquí puedes más adelante listar señales automáticas, alertas, etc.
+                                Aquí luego puedes listar señales automáticas, alertas, etc.
                             </p>
                         </div>
 
@@ -228,37 +289,37 @@
             </div>
         </div>
 
-        {{-- Aquí podrías tener tus charts a la derecha --}}
+        {{-- aquí podrías tener tus gráficas a la derecha --}}
         {{-- <div class="col-xl-8 col-lg-7"> ... </div> --}}
     </div>
 </div>
 
-{{-- JS búsqueda / filtros --}}
+{{-- ================== JAVASCRIPT ================== --}}
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    const searchInput      = document.getElementById('socialSearch');
-    const traderRows       = document.querySelectorAll('.trader-row');
-    const streamRows       = document.querySelectorAll('.stream-row');
-    const traderFilterBtns = document.querySelectorAll('.social-filter-btn');
-    const streamFilterBtns = document.querySelectorAll('.stream-filter-option');
-    const streamFilterLabel= document.getElementById('streamFilterLabel');
+    const searchInput  = document.getElementById('socialSearch');
+    const traderRows   = document.querySelectorAll('.trader-row');
+    const streamRows   = document.querySelectorAll('.stream-row');
 
-    let traderFilter = 'top';
+    const btnTop       = document.getElementById('btnTopRanked');
+    const btnSpot      = document.getElementById('btnSpotlight');
+    const topBox       = document.getElementById('topRankedContainer');
+    const spotBox      = document.getElementById('spotlightContainer');
+
+    const streamFilterBtns  = document.querySelectorAll('.stream-filter-option');
+    const streamFilterLabel = document.getElementById('streamFilterLabel');
+
     let streamFilter = 'all';
 
-    function filterTraders() {
+    // --------- Filtro de búsqueda (traders + stream) ----------
+    function applySearch() {
         const q = searchInput.value.trim().toLowerCase();
+
         traderRows.forEach(row => {
             const name = row.getAttribute('data-name');
-            const tag  = row.getAttribute('data-tag');
-            const matchText = name.includes(q);
-            const matchTag  = (traderFilter === 'all' || traderFilter === tag);
-            row.style.display = (matchText && matchTag) ? '' : 'none';
+            row.style.display = name.includes(q) ? '' : 'none';
         });
-    }
 
-    function filterStream() {
-        const q = searchInput.value.trim().toLowerCase();
         streamRows.forEach(row => {
             const trader = row.getAttribute('data-trader');
             const type   = row.getAttribute('data-type'); // profit / other
@@ -268,114 +329,45 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Buscador afecta traders + stream
-    searchInput.addEventListener('input', function () {
-        filterTraders();
-        filterStream();
-    });
+    if (searchInput) {
+        searchInput.addEventListener('input', applySearch);
+    }
 
-    // Top ranked / Spotlight
-    traderFilterBtns.forEach(btn => {
-        btn.addEventListener('click', function () {
-            traderFilterBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            traderFilter = this.getAttribute('data-filter'); // top / spotlight
-            filterTraders();
-        });
-    });
-
-    // Filtro Social stream
+    // --------- Filtro Social stream (All traders / Profitable only) ----------
     streamFilterBtns.forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
             streamFilterBtns.forEach(l => l.classList.remove('active'));
             this.classList.add('active');
-            streamFilter = this.getAttribute('data-filter'); // all / profit
+
+            streamFilter = this.getAttribute('data-filter');
             streamFilterLabel.textContent = this.textContent.trim();
-            filterStream();
+
+            applySearch();
         });
     });
 
-    // Inicial
-    filterTraders();
-    filterStream();
-});
-// Botones Top Ranked / Spotlight
-const spotlightBtn      = document.querySelector('.social-filter-btn[data-filter="spotlight"]');
-const topBtn            = document.querySelector('.social-filter-btn[data-filter="top"]');
-const spotlightWrapper  = document.getElementById('spotlightTrader');
-const traderListWrapper = document.getElementById('tradersListWrapper');
-const traderRows        = document.querySelectorAll('.trader-row');
-
-function countryLabel(code) {
-    switch (code) {
-        case 'US': return '🇺🇸 United States';
-        case 'MX': return '🇲🇽 Mexico';
-        case 'PH': return '🇵🇭 Philippines';
-        case 'UK': return '🇬🇧 United Kingdom';
-        default:   return code;
+    // --------- Toggle Top ranked / Spotlight ----------
+    function showTop() {
+        btnTop.classList.add('active');
+        btnSpot.classList.remove('active');
+        topBox.classList.remove('d-none');
+        spotBox.classList.add('d-none');
     }
-}
 
-// Rellena la tarjeta Spotlight a partir de un .trader-row
-function fillSpotlightFromRow(row) {
-    const name    = row.getAttribute('data-name');
-    const copiers = row.getAttribute('data-copiers');
-    const pl1m    = row.getAttribute('data-pl');
-    const pl3m    = row.getAttribute('data-pl3m');
-    const pl6m    = row.getAttribute('data-pl6m');
-    const risk    = row.getAttribute('data-risk');
-    const country = row.getAttribute('data-country');
+    function showSpotlight() {
+        btnSpot.classList.add('active');
+        btnTop.classList.remove('active');
+        topBox.classList.add('d-none');
+        spotBox.classList.remove('d-none');
+    }
 
-    document.getElementById('spotTraderName').textContent   = name;
-    document.getElementById('spotTraderCopiers').textContent= copiers;
-    document.getElementById('spotTraderPl1m').textContent   = pl1m + '%';
-    document.getElementById('spotTraderPl3m').textContent   = pl3m + '%';
-    document.getElementById('spotTraderPl6m').textContent   = pl6m + '%';
-    document.getElementById('spotTraderRisk').textContent   = 'Risk: ' + risk;
-    document.getElementById('spotTraderCountry').textContent= countryLabel(country);
-
-    // Avatar: inicial y color del trader
-    const avatar = document.getElementById('spotAvatar');
-    avatar.textContent = name.charAt(0).toUpperCase();
-    const bg = row.querySelector('.rounded-circle').style.backgroundColor;
-    if (bg) avatar.style.backgroundColor = bg;
-}
-
-// Click en botón Spotlight
-if (spotlightBtn && topBtn) {
-    spotlightBtn.addEventListener('click', function () {
-        spotlightBtn.classList.add('active');
-        topBtn.classList.remove('active');
-
-        spotlightWrapper.classList.remove('d-none');
-        traderListWrapper.classList.add('d-none');
-
-        // Usa el primer trader visible como destacado
-        const firstVisible = Array.from(traderRows).find(r => r.style.display !== 'none');
-        if (firstVisible) {
-            fillSpotlightFromRow(firstVisible);
-        }
-    });
-
-    // Click en botón Top ranked
-    topBtn.addEventListener('click', function () {
-        topBtn.classList.add('active');
-        spotlightBtn.classList.remove('active');
-
-        spotlightWrapper.classList.add('d-none');
-        traderListWrapper.classList.remove('d-none');
-    });
-}
-
-// Opcional: al hacer click en un trader, abrirlo en Spotlight directamente
-traderRows.forEach(row => {
-    row.addEventListener('click', function () {
-        // cambia a modo Spotlight
-        spotlightBtn.click();
-        // y carga sus datos
-        fillSpotlightFromRow(this);
-    });
+    if (btnTop && btnSpot && topBox && spotBox) {
+        btnTop.addEventListener('click', showTop);
+        btnSpot.addEventListener('click', showSpotlight);
+        // estado inicial
+        showTop();
+    }
 });
 </script>
 @endsection
