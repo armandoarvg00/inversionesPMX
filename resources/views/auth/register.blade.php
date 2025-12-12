@@ -9,9 +9,8 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-5 text-center mx-auto">
-                        <h1 class="text-white mb-2 mt-5">Welcome!</h1>
-                        <p class="text-lead text-white">Use these awesome forms to login or create new account in your
-                            project for free.</p>
+                        <h1 class="text-white mb-2 mt-5">Bienvenidos!</h1>
+                        <p class="text-lead text-white">Este es el momemto de iniciar tu libertad financiera.</p>
                     </div>
                 </div>
             </div>
@@ -24,7 +23,7 @@
                             <h5>Register with</h5>
                         </div>
                         <div class="row px-xl-5 px-sm-4 px-3">
-                            <div class="col-3 ms-auto px-1">
+                            <!--<div class="col-3 ms-auto px-1">
                                 <a class="btn btn-outline-light w-100" href="javascript:;">
                                     <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -79,7 +78,7 @@
                                     class="text-sm font-weight-bold mb-2 text-secondary text-border d-inline z-index-2 bg-white px-3">
                                     or
                                 </p>
-                            </div>
+                            </div>-->
                         </div>
                         <div class="card-body">
                             <form method="POST" action="{{ route('register.perform') }}">
@@ -105,10 +104,10 @@
                                     @error('terms') <p class='text-danger text-xs'> {{ $message }} </p> @enderror
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign up</button>
+                                    <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Registrar</button>
                                 </div>
-                                <p class="text-sm mt-3 mb-0">Already have an account? <a href="{{ route('login') }}"
-                                        class="text-dark font-weight-bolder">Sign in</a></p>
+                                <p class="text-sm mt-3 mb-0">Ya tienes cuenta? <a href="{{ route('login') }}"
+                                        class="text-dark font-weight-bolder">Iniciar Sesión</a></p>
                             </form>
                         </div>
                     </div>
