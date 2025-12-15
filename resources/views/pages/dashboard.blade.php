@@ -12,12 +12,12 @@
                                 <div class="numbers">
                                     <p class="text-sm mb-0 text-uppercase font-weight-bold">Equity</p>
                                     <h5 class="font-weight-bolder">
-                                        $53,000
+                                        $000
                                     </h5>
-                                    <p class="mb-0">
+                                   <!-- <p class="mb-0">
                                         <span class="text-success text-sm font-weight-bolder">+55%</span>
                                         since yesterday
-                                    </p>
+                                    </p>-->
                                 </div>
                             </div>
                             <div class="col-4 text-end">
@@ -35,14 +35,14 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Free margin</p>
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Equity</p>
                                     <h5 class="font-weight-bolder">
-                                        2,300
+                                        $000
                                     </h5>
-                                    <p class="mb-0">
-                                        <span class="text-success text-sm font-weight-bolder">+3%</span>
-                                        since last week
-                                    </p>
+                                   <!-- <p class="mb-0">
+                                        <span class="text-success text-sm font-weight-bolder">+55%</span>
+                                        since yesterday
+                                    </p>-->
                                 </div>
                             </div>
                             <div class="col-4 text-end">
@@ -60,14 +60,14 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Used margin</p>
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Equity</p>
                                     <h5 class="font-weight-bolder">
-                                        +3,462
+                                        $000
                                     </h5>
-                                    <p class="mb-0">
-                                        <span class="text-danger text-sm font-weight-bolder">-2%</span>
-                                        since last quarter
-                                    </p>
+                                   <!-- <p class="mb-0">
+                                        <span class="text-success text-sm font-weight-bolder">+55%</span>
+                                        since yesterday
+                                    </p>-->
                                 </div>
                             </div>
                             <div class="col-4 text-end">
@@ -85,13 +85,14 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Open P/L</p>
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Equity</p>
                                     <h5 class="font-weight-bolder">
-                                        $103,430
+                                        $000
                                     </h5>
-                                    <p class="mb-0">
-                                        <span class="text-success text-sm font-weight-bolder">+5%</span> than last month
-                                    </p>
+                                   <!-- <p class="mb-0">
+                                        <span class="text-success text-sm font-weight-bolder">+55%</span>
+                                        since yesterday
+                                    </p>-->
                                 </div>
                             </div>
                             <div class="col-4 text-end">
@@ -110,13 +111,14 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Balance</p>
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Equity</p>
                                     <h5 class="font-weight-bolder">
-                                        $103,430
+                                        $000
                                     </h5>
-                                    <p class="mb-0">
-                                        <span class="text-success text-sm font-weight-bolder">+5%</span> than last month
-                                    </p>
+                                   <!-- <p class="mb-0">
+                                        <span class="text-success text-sm font-weight-bolder">+55%</span>
+                                        since yesterday
+                                    </p>-->
                                 </div>
                             </div>
                             <div class="col-4 text-end">
@@ -134,13 +136,14 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">BalaMargin level</p>
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Equity</p>
                                     <h5 class="font-weight-bolder">
-                                        $103,430
+                                        $000
                                     </h5>
-                                    <p class="mb-0">
-                                        <span class="text-success text-sm font-weight-bolder">+5%</span> than last month
-                                    </p>
+                                   <!-- <p class="mb-0">
+                                        <span class="text-success text-sm font-weight-bolder">+55%</span>
+                                        since yesterday
+                                    </p>-->
                                 </div>
                             </div>
                             <div class="col-4 text-end">
@@ -158,13 +161,14 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Credit</p>
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Equity</p>
                                     <h5 class="font-weight-bolder">
-                                        $103,430
+                                        $000
                                     </h5>
-                                    <p class="mb-0">
-                                        <span class="text-success text-sm font-weight-bolder">+5%</span> than last month
-                                    </p>
+                                   <!-- <p class="mb-0">
+                                        <span class="text-success text-sm font-weight-bolder">+55%</span>
+                                        since yesterday
+                                    </p>-->
                                 </div>
                             </div>
                             <div class="col-4 text-end">

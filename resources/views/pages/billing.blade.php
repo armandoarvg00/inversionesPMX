@@ -14,16 +14,16 @@
                                 <div class="card-body position-relative z-index-1 p-3">
                                     <i class="fas fa-wifi text-white p-2"></i>
                                     <h5 class="text-white mt-4 mb-5 pb-2">
-                                        4562&nbsp;&nbsp;&nbsp;1122&nbsp;&nbsp;&nbsp;4594&nbsp;&nbsp;&nbsp;7852</h5>
+                                        ***&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****</h5>
                                     <div class="d-flex">
                                         <div class="d-flex">
                                             <div class="me-4">
                                                 <p class="text-white text-sm opacity-8 mb-0">Card Holder</p>
-                                                <h6 class="text-white mb-0">Jack Peterson</h6>
+                                                <h6 class="text-white mb-0">**** ****</h6>
                                             </div>
                                             <div>
                                                 <p class="text-white text-sm opacity-8 mb-0">Expires</p>
-                                                <h6 class="text-white mb-0">11/22</h6>
+                                                <h6 class="text-white mb-0">**/**</h6>
                                             </div>
                                         </div>
                                         <div class="ms-auto w-20 d-flex align-items-end justify-content-end">
@@ -45,10 +45,10 @@
                                         </div>
                                     </div>
                                     <div class="card-body pt-0 p-3 text-center">
-                                        <h6 class="text-center mb-0">Salary</h6>
+                                        <h6 class="text-center mb-0">Saldo</h6>
                                         <span class="text-xs">Belong Interactive</span>
                                         <hr class="horizontal dark my-3">
-                                        <h5 class="mb-0">+$2000</h5>
+                                        <h5 class="mb-0">+$4500</h5>
                                     </div>
                                 </div>
                             </div>
@@ -61,7 +61,7 @@
                                         </div>
                                     </div>
                                     <div class="card-body pt-0 p-3 text-center">
-                                        <h6 class="text-center mb-0">Paypal</h6>
+                                        <h6 class="text-center mb-0">Ganancias</h6>
                                         <span class="text-xs">Freelance Payment</span>
                                         <hr class="horizontal dark my-3">
                                         <h5 class="mb-0">$455.00</h5>
@@ -78,8 +78,8 @@
                                         <h6 class="mb-0">Payment Method</h6>
                                     </div>
                                     <div class="col-6 text-end">
-                                        <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i
-                                                class="fas fa-plus"></i>&nbsp;&nbsp;Add New Card</a>
+                                        <!--<a class="btn bg-gradient-dark mb-0" href="javascript:;"><i
+                                                class="fas fa-plus"></i>&nbsp;&nbsp;Add New Card</a>-->
                                     </div>
                                 </div>
                             </div>
