@@ -35,7 +35,9 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Equity</p>
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Free margin
+
+</p>
                                     <h5 class="font-weight-bolder">
                                         $000
                                     </h5>
@@ -60,7 +62,9 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Equity</p>
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Used margin
+
+</p>
                                     <h5 class="font-weight-bolder">
                                         $000
                                     </h5>
@@ -85,7 +89,9 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Equity</p>
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Open P/L
+
+</p>
                                     <h5 class="font-weight-bolder">
                                         $000
                                     </h5>
@@ -111,7 +117,7 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Equity</p>
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Balance</p>
                                     <h5 class="font-weight-bolder">
                                         $000
                                     </h5>
@@ -136,7 +142,9 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Equity</p>
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Margin level
+
+</p>
                                     <h5 class="font-weight-bolder">
                                         $000
                                     </h5>
@@ -161,7 +169,7 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Equity</p>
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Credit</p>
                                     <h5 class="font-weight-bolder">
                                         $000
                                     </h5>

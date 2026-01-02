@@ -64,7 +64,7 @@
                                         <h6 class="text-center mb-0">Ganancias</h6>
                                         <span class="text-xs">Freelance Payment</span>
                                         <hr class="horizontal dark my-3">
-                                        <h5 class="mb-0">$455.00</h5>
+                                        <h5 class="mb-0">$87,000.00</h5>
                                     </div>
                                 </div>
                             </div>
