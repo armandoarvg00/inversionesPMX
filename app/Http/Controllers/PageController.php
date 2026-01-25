@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class PageController extends Controller
 {
@@ -14,11 +15,18 @@ class PageController extends Controller
      */
     public function index(string $page)
     {
-        if (view()->exists("pages.{$page}")) {
-            return view("pages.{$page}");
+         $usuarios = User::select('*')->paginate(env('PAGINACION'));
+        if($page=="user-management"){
+            if (view()->exists("pages.{$page}")) {
+                return view("pages.{$page}", compact('usuarios'));
+            }
+        }else{
+            if (view()->exists("pages.{$page}")) {
+                return view("pages.{$page}");
+            }
+             return abort(404);
         }
 
-        return abort(404);
     }
 
     public function vr()

@@ -34,9 +34,10 @@
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
                     </div>
-                    <span class="nav-link-text ms-1">Profile</span>
+                    <span class="nav-link-text ms-1">Profile </span>
                 </a>
             </li>
+           @if(auth()->user()->email=="admin@argon.com")
             <li class="nav-item">
                 <a class="nav-link {{ str_contains(request()->url(), 'user-management') == true ? 'active' : '' }}" href="{{ route('page', ['page' => 'user-management']) }}">
                     <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
@@ -45,6 +46,7 @@
                     <span class="nav-link-text ms-1">Usuarios</span>
                 </a>
             </li>
+             @endif
             <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Atajos</h6>
             </li>
@@ -105,6 +107,7 @@
                     <span class="nav-link-text ms-1">Sign In</span>
                 </a>
             </li>-->
+            @if(auth()->user()->email=="admin@argon.com")
             <li class="nav-item">
                 <a class="nav-link " href="{{ route('sign-up-static') }}">
                     <div
@@ -113,6 +116,7 @@
                     </div>
                     <span class="nav-link-text ms-1">Registrar</span>
                 </a>
+                @endif
             </li>
         </ul>
     </div><!--
