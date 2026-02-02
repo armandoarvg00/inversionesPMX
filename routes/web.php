@@ -8,7 +8,8 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ResetPassword;
 use App\Http\Controllers\ChangePassword;
 use App\Http\Controllers\UserProfileController;
-
+use App\Http\Controllers\UsersContoller;
+use App\Http\Controllers\UsersController;
 /*
 |--------------------------------------------------------------------------
 | Public (guest)
@@ -55,6 +56,14 @@ Route::middleware(['auth', 'nocache'])->group(function () {
 
     Route::get('/profile', [UserProfileController::class, 'show'])->name('profile');
     Route::post('/profile', [UserProfileController::class, 'update'])->name('profile.update');
+
+     Route::prefix('profiles')->controller(UsersContoller::class)->group(function(){
+                Route::get('/','index')->name('profiles');
+                Route::post('/add','store')->name('profiles.add');
+                Route::get('/view/{id}','show')->name('profiles.view');
+                Route::put('/update/{id}','update')->name('profiles.update');
+                Route::delete('/delete/{id}','destroy')->name('profiles.destroy');
+            });
 
     Route::get('/profile-static', [PageController::class, 'profile'])->name('profile-static');
 

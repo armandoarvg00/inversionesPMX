@@ -30,36 +30,39 @@
                             <tbody>
                                 @foreach ($usuarios as $usuario)
                                     <tr>
-                                        <td >
-                                            <div class="d-flex px-3 py-1">
-                                            <div>
-                                                <img src="./img/userfail.png" class="avatar me-3" alt="image">
+                                            <td >
+                                                <div class="d-flex px-3 py-1">
+                                                    <div>
+                                                        <img src="./img/userfail.png" class="avatar me-3" alt="image">
+                                                    </div>
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <h6 class="mb-0 text-sm"> {{$usuario->username}}</h6>
+                                                    </div>
                                             </div>
-                                            <div class="d-flex flex-column justify-content-center">
-                                                <h6 class="mb-0 text-sm"> {{$usuario->username}}</h6>
-                                            </div>
-                                        </div>
-                                        </td>
-                                        <td >
-                                            {{$usuario->username}}
-                                        </td>
-                                        <td >
-                                            <label for="example-text-input" class="form-control-label">Inversión</label>
-                                            <input class="form-control" type="inversión" name="inversion" value="{{$usuario->postal}}">
+                                            </td>
+                                            <td >
+                                                {{$usuario->username}}
+                                            </td>
+                                            <td >
+                                                <label for="example-text-input" class="form-control-label">Inversión</label>
+                                                <input class="form-control" type="inversión" id="postal{{$usuario->id}}" name="postal{{$usuario->id}}" value="{{$usuario->postal}}">
 
-                                        </td>
-                                        <td >
-                                            <label for="gananciat" class="form-control-label">Ganancia </label>
-                                            <input class="form-control" type="text" name="ganancia" value="{{$usuario->about}}">
-
-                                        </td>
-                                        <td>
-                                            <div class="card-header pb-0">
-                                                <div class="d-flex align-items-center">
-                                                    <button type="submit" class="btn btn-primary btn-sm ms-auto">Guardar</button>
+                                            </td>
+                                            <td >
+                                                <label for="gananciat" class="form-control-label">Ganancia </label>
+                                                <input class="form-control" type="text" id="about{{$usuario->id}}" name="about{{$usuario->id}}" value="{{$usuario->about}}">
+                                                <input class="form-control" type="hidden" id="id{{$usuario->id}}" name="id{{$usuario->id}}" value="{{$usuario->id}}">
+                                            </td>
+                                            <td>
+                                                <div class="card-header pb-0">
+                                                    <div class="d-flex align-items-center">
+                                                        <button  onclick="usuarioguardar('{{env('APP_URL')}}/profiles/update/','{{$usuario->id}}')"
+                                                        class="btn btn-primary btn-sm ms-auto">Guardar
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </td>
+                                            </td>
+
                                     </tr>
                                 @endforeach
                             </tbody>

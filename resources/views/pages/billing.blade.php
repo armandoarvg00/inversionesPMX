@@ -48,7 +48,7 @@
                                         <h6 class="text-center mb-0">Saldo</h6>
                                         <span class="text-xs">Belong Interactive</span>
                                         <hr class="horizontal dark my-3">
-                                        <h5 class="mb-0">$5,000</h5>
+                                        <h5 class="mb-0">${{auth()->user()->postal}}</h5>
                                     </div>
                                 </div>
                             </div>
@@ -64,7 +64,7 @@
                                         <h6 class="text-center mb-0">Ganancias</h6>
                                         <span class="text-xs">Freelance Payment</span>
                                         <hr class="horizontal dark my-3">
-                                        <h5 class="mb-0">$10,000</h5>
+                                        <h5 class="mb-0">${{auth()->user()->about}}</h5>
                                     </div>
                                 </div>
                             </div>

@@ -48,13 +48,13 @@ class UsersContoller extends Controller
         return $usuario;
     }
     public function update(Request $request){
+        //dd($request);
         $user = user::findOrFail($request->id);
-        $user->name= $request->name;
-        $user->lastname= $request->lastname;
-        $user->email =$request->username;
-        $user->username =$request->lastname;
+        $user->postal= $request->postal;
+        $user->about= $request->about;
         $user->save();
-        return $user;
+        return view('pages.user-profile');
+        //return $user;
         //return view('configuracion.aseguradoras.aseguradoras', compact('aseguradoras'));
     }
 }
