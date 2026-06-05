@@ -190,6 +190,7 @@
             </div>
         </div>
 
+           <!-- 
         <div class="row mt-4">
             <div class="col-lg-6 mb-lg-0 mb-4">
                 <div class="card z-index-2 h-100">
@@ -219,7 +220,7 @@
                     </div>
                 </div>
             </div>
-            <!--
+        
             <div class="col-lg-6">
                 <div class="card card-carousel overflow-hidden h-100 p-0">
                     <div id="carouselExampleCaptions" class="carousel slide h-100" data-bs-ride="carousel">
@@ -268,7 +269,7 @@
                         </button>
                     </div>
                 </div>
-            </div>-->
+            </div>
         </div>
         <div class="row mt-4">
 
@@ -450,10 +451,8 @@
                         </table>
                     </div>
                 </div>
-
-
-    </div>
-            </div>
+            </div>-->
+        </div>
             <div class="col-lg-6">
             <div class="col-xl-12 col-lg-5">
             <div class="card">
