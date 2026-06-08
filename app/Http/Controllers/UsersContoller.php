@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
+use App\Models\user_metodopago;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class UsersContoller extends Controller
@@ -53,6 +54,11 @@ class UsersContoller extends Controller
         $user->postal= $request->postal;
         $user->about= $request->about;
         $user->save();
+        $user_metodopago =new user_metodopago();
+        $user_metodopago->id_user =$request->id;
+        $user_metodopago->monto =$request->postal;
+        $user_metodopago->save();
+
         return view('pages.user-profile');
         //return $user;
         //return view('configuracion.aseguradoras.aseguradoras', compact('aseguradoras'));

@@ -56,7 +56,7 @@
                                             <td>
                                                 <div class="card-header pb-0">
                                                     <div class="d-flex align-items-center">
-                                                        <button  onclick="usuarioguardar('{{env('APP_URL')}}/profiles/update/','{{$usuario->id}}')"
+                                                        <button  onclick="usuarioguardar('{{env('APP_URL')}}profiles/update/','{{$usuario->id}}')"
                                                         class="btn btn-primary btn-sm ms-auto">Guardar
                                                         </button>
                                                     </div>

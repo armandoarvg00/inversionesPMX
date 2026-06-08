@@ -21,7 +21,7 @@ window.usuarioguardar = function (endpoint, userId) {
                     console.error(error);
                 })
                 .finally(() => {
-                    setTimeout(() => location.reload(), 500);
+                   // setTimeout(() => location.reload(), 500);
                 });
         } else {
             console.log("*No se edita el usuario*");
