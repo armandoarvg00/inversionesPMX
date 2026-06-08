@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\user_metodopago;
 class HomeController extends Controller
 {
         /**
@@ -22,7 +22,10 @@ class HomeController extends Controller
      * @return \Illuminate\View\View
      */
     public function index()
-    {
-        return view('pages.dashboard');
+    { 
+        //user_metodopago = user_metodopago::paginate(15);
+
+        $user_metodopago = user_metodopago::where('id_user', '=', auth()->user()->id)->paginate(15);
+        return view('pages.dashboard', compact('user_metodopago'));
     }
 }
