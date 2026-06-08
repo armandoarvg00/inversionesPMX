@@ -32,7 +32,7 @@
                 <a class="nav-link {{ Route::currentRouteName() == 'profile' ? 'active' : '' }}" href="{{ route('profile') }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
+                        <i class="ni ni-money-coins text-dark text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text ms-1">Transferir </span>
                 </a>
@@ -41,7 +41,7 @@
                 <a class="nav-link {{ Route::currentRouteName() == 'profile' ? 'active' : '' }}" href="{{ route('profile') }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
+                        <i class="ni ni-chart-pie-35 text-dark text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text ms-1">Invertir </span>
                 </a>
@@ -50,7 +50,7 @@
                 <a class="nav-link {{ Route::currentRouteName() == 'profile' ? 'active' : '' }}" href="{{ route('profile') }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
+                        <i class="ni ni-credit-card text-dark text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text ms-1">Solicitar un prestamo </span>
                 </a>
@@ -59,7 +59,7 @@
                 <a class="nav-link {{ Route::currentRouteName() == 'profile' ? 'active' : '' }}" href="{{ route('profile') }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
+                        <i class="ni ni-bold-down text-dark text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text ms-1">Retiro sin tarjeta </span>
                 </a>
@@ -68,7 +68,7 @@
                 <a class="nav-link {{ Route::currentRouteName() == 'profile' ? 'active' : '' }}" href="{{ route('profile') }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
+                        <i class="ni ni-tv-2 text-dark text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text ms-1"> Pagar servicios</span>
                 </a>
@@ -77,7 +77,7 @@
                 <a class="nav-link {{ Route::currentRouteName() == 'profile' ? 'active' : '' }}" href="{{ route('profile') }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
+                        <i class="ni ni-collection text-dark text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text ms-1">Estado de cuenta </span>
                 </a>
