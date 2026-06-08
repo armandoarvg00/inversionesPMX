@@ -197,13 +197,3 @@
 </aside>
 
 
-<script>
-function mostrarBloqueo(event) {
-    if (event) event.preventDefault();
-    document.getElementById('modalCuentaBloqueada').classList.remove('d-none');
-}
-
-function cerrarBloqueo() {
-    document.getElementById('modalCuentaBloqueada').classList.add('d-none');
-}
-</script>
