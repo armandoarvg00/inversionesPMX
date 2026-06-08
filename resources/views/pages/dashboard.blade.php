@@ -44,7 +44,7 @@
                                     <div class="card-header mx-4 p-3 text-center">
                                         <div
                                             class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
-                                            <i class="fas fa-landmark opacity-10"></i>
+                                            <i class="fas fa-landmark opacity-10">$</i>
                                         </div>
                                     </div>
                                     <div class="card-body pt-0 p-6 text-center">
@@ -60,7 +60,7 @@
                                     <div class="card-header mx-4 p-3 text-center">
                                         <div
                                             class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
-                                            <i class="fab fa-paypal opacity-10"></i>
+                                            <i class="fab fa-paypal opacity-10">$</i>
                                         </div>
                                     </div>
                                     <div class="card-body pt-0 p-6 text-center">
@@ -73,7 +73,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12 mb-lg-0 mb-4">
+                    <!--<div class="col-md-12 mb-lg-0 mb-4">
                         <div class="card mt-4">
                             <div class="card-header pb-0 p-3">
                                 <div class="row">
@@ -81,8 +81,8 @@
                                         <h6 class="mb-0">Metodos de pago</h6>
                                     </div>
                                     <div class="col-6 text-end">
-                                        <!--<a class="btn bg-gradient-dark mb-0" href="javascript:;"><i
-                                                class="fas fa-plus"></i>&nbsp;&nbsp;Add New Card</a>-->
+                                        <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i
+                                                class="fas fa-plus"></i>&nbsp;&nbsp;Add New Card</a>
                                     </div>
                                 </div>
                             </div>
@@ -111,7 +111,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -119,7 +119,7 @@
             <div class="col-md-12 mt-4">
                 <div class="card">
                     <div class="card-header pb-0 px-3">
-                        <h6 class="mb-0">Billing Information</h6>
+                        <h6 class="mb-0">Pagos realizados </h6>
                     </div>
                     <div class="card-body pt-4 p-3">
                         <ul class="list-group">

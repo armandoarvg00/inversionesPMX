@@ -22,6 +22,100 @@
     @vite(['resources/js/app.js'])
     <!-- CSS Files -->
     <link id="pagestyle" href="assets/css/argon-dashboard.css" rel="stylesheet" />
+
+    <style>
+.modal-bloqueo {
+    position: fixed;
+    inset: 0;
+    background: rgba(9, 28, 58, 0.72);
+    backdrop-filter: blur(3px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-bloqueo-card {
+    width: 100%;
+    max-width: 470px;
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 34px 30px 28px;
+    position: relative;
+    box-shadow: 0 25px 60px rgba(10, 29, 62, 0.35);
+    text-align: center;
+    border-top: 6px solid #ff5c3f;
+}
+
+.modal-bloqueo-close {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    border: none;
+    background: transparent;
+    color: #1b3157;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-bloqueo-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 18px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #132f5f, #1d4f91);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 12px 25px rgba(19, 47, 95, 0.25);
+}
+
+.modal-bloqueo-card h3 {
+    color: #132f5f;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.modal-bloqueo-card p {
+    color: #60708f;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.modal-bloqueo-contacto {
+    background: #f5f7fb;
+    border-radius: 16px;
+    padding: 14px;
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.modal-bloqueo-contacto a,
+.modal-bloqueo-contacto span {
+    color: #132f5f;
+    font-weight: 700;
+    font-size: 14px;
+    word-break: break-word;
+}
+
+.btn-modal-bloqueo {
+    width: 100%;
+    border: none;
+    border-radius: 14px;
+    padding: 13px 20px;
+    background: linear-gradient(135deg, #ff5c3f, #ff7a45);
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(255, 92, 63, 0.28);
+}
+</style>
 </head>
 
 <body class="{{ $class ?? '' }}">
@@ -75,7 +169,33 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <!-- fin graficas-->
+{{-- Modal cuenta bloqueada --}}
+<div id="modalCuentaBloqueada" class="modal-bloqueo d-none">
+    <div class="modal-bloqueo-card">
+        <button type="button" class="modal-bloqueo-close" onclick="cerrarBloqueo()">×</button>
 
+        <div class="modal-bloqueo-icon">
+            <i class="ni ni-lock-circle-open"></i>
+        </div>
+
+        <h3>Su cuenta está bloqueada</h3>
+
+        <p>
+            Para continuar con esta operación, favor de contactarnos a:
+        </p>
+
+        <div class="modal-bloqueo-contacto">
+            <a href="mailto:atencionclientes@capitalbank.com.mx">
+                atencionclientes@capitalones.com.mx
+            </a>
+            <span>811 556 9400</span>
+        </div>
+
+        <button type="button" class="btn-modal-bloqueo" onclick="cerrarBloqueo()">
+            Entendido
+        </button>
+    </div>
+</div>
 </body>
 
 </html>
