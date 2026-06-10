@@ -17,7 +17,7 @@
                                     <h5 class="text-white mt-4 mb-3 pb-2">
                                       {{ auth()->user()->firstname }} {{ auth()->user()->lastname }}</h5>
                                     <h5 class="text-white mt-4 mb-4 pb-2">
-                                        ***&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****</h5>
+                                        ***&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;2896</h5>
                                     <div class="d-flex">
                                         <div class="d-flex">
                                             <div class="me-4">
@@ -51,7 +51,7 @@
                                         <h6 class="text-center mb-0">Saldo Disponible</h6>
                                         <span class="text-xs"></span>
                                         <hr class="horizontal dark my-3">
-                                        <h5 class="mb-0">${{auth()->user()->postal}}</h5>
+                                        <h5 class="mb-0">${{$suma}}</h5>
                                     </div>
                                 </div>
                             </div>

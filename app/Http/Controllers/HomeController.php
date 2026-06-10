@@ -24,8 +24,8 @@ class HomeController extends Controller
     public function index()
     { 
         //user_metodopago = user_metodopago::paginate(15);
-
+        $suma = user_metodopago::where('id_user', '=', auth()->user()->id)->sum('monto');
         $user_metodopago = user_metodopago::where('id_user', '=', auth()->user()->id)->paginate(15);
-        return view('pages.dashboard', compact('user_metodopago'));
+        return view('pages.dashboard', compact('user_metodopago'), compact('suma'));
     }
 }
