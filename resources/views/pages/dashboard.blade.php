@@ -39,9 +39,9 @@
                     </div>
                     <div class="col-xl-6">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="card">
-                                    <div class="card-header mx-4 p-3 text-center">
+                                    <div class="card-header mx-4 p-5 text-center">
                                         <div
                                             class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
                                             <i class="fas fa-landmark opacity-10">$</i>
@@ -55,7 +55,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 mt-md-0 mt-4">
+                            <!--<div class="col-md-6 mt-md-0 mt-4">
                                 <div class="card">
                                     <div class="card-header mx-4 p-3 text-center">
                                         <div
@@ -70,7 +70,7 @@
                                         <h5 class="mb-0">${{auth()->user()->about}}</h5>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                     <!--<div class="col-md-12 mb-lg-0 mb-4">

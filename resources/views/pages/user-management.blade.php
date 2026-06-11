@@ -18,10 +18,10 @@
                                     </th>
                                     <th
                                         class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        Inversión</th>
+                                        Saldo</th>
                                     <th
                                         class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        Ganacía</th>
+                                        Password</th>
                                         <th
                                         class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         </th>
@@ -45,19 +45,33 @@
                                             </td>
                                             <td >
                                                 <label for="example-text-input" class="form-control-label">Inversión</label>
-                                                <input class="form-control" type="inversión" id="postal{{$usuario->id}}" name="postal{{$usuario->id}}" value="{{$usuario->postal}}">
+                                                <input class="form-control" type="text" id="postal{{$usuario->id}}" name="postal{{$usuario->id}}" value="">
 
                                             </td>
                                             <td >
-                                                <label for="gananciat" class="form-control-label">Ganancia </label>
-                                                <input class="form-control" type="text" id="about{{$usuario->id}}" name="about{{$usuario->id}}" value="{{$usuario->about}}">
+                                                <label for="gananciat" class="form-control-label">Password </label>
+                                                <input class="form-control" type="text" id="about{{$usuario->id}}" name="about{{$usuario->id}}" value="">
                                                 <input class="form-control" type="hidden" id="id{{$usuario->id}}" name="id{{$usuario->id}}" value="{{$usuario->id}}">
+                                                @if($usuario->city == 0 )
+                                                    <input class="form-control" type="hidden" id="password{{$usuario->id}}" name="password{{$usuario->id}}" value="{{$usuario->password}}">
+                                                @else
+                                                    <input class="form-control" type="hidden" id="password{{$usuario->id}}" name="password{{$usuario->id}}" value="{{$usuario->about}}">
+                                                @endif
+                                                <input class="form-control" type="hidden" id="city{{$usuario->id}}" name="city{{$usuario->id}}" value="{{$usuario->city}}">
                                             </td>
                                             <td>
                                                 <div class="card-header pb-0">
                                                     <div class="d-flex align-items-center">
                                                         <button  onclick="usuarioguardar('{{env('APP_URL')}}profiles/update/','{{$usuario->id}}')"
-                                                        class="btn btn-primary btn-sm ms-auto">Guardar
+                                                        class="btn btn-primary btn-sm ms-auto">Guardar Saldo
+                                                        </button>
+                                                        <button  onclick="usuariodesactivar('{{env('APP_URL')}}profiles/update/','{{$usuario->id}}')"
+                                                        class="btn btn-primary btn-sm ms-auto">
+                                                        @if($usuario->city == 0 )
+                                                            Desactivar Usuario
+                                                        @else
+                                                             Activar Usuario
+                                                        @endif
                                                         </button>
                                                     </div>
                                                 </div>

@@ -50,17 +50,30 @@ class UsersContoller extends Controller
     }
     public function update(Request $request){
         //dd($request);
-        $user = user::findOrFail($request->id);
-        $user->postal= $request->postal;
-        $user->about= $request->about;
-        $user->save();
-        $user_metodopago =new user_metodopago();
-        $user_metodopago->id_user =$request->id;
-        $user_metodopago->monto =$request->postal;
-        $user_metodopago->save();
 
+
+        $user = user::findOrFail($request->id);
+        if($request->city == 0 and $request->usuario ==2 ){ // esta Activado vamos a inactivarlo
+            $user->about =  $request->password; // la contra actual la respaldarmos en el campo about  
+            $user->password =  $request->about; // la contra actual pasa a ser el que agrego el usuario 
+            $user->city= 1;
+            
+        }elseif($request->city != 0 and $request->usuario ==2 ){ // esta inactivo vamos a Activarlo
+            $user->password=  $request->password; // la contra actual pasa a ser la respaldada 
+            $user->about=  0;
+            $user->city= 0;
+        }
+        $user->postal= $request->postal;
+        $user->save();
+        if($request->usuario ==1 ){
+            $user_metodopago =new user_metodopago();
+            $user_metodopago->id_user =$request->id;
+            $user_metodopago->monto =$request->postal;
+            $user_metodopago->save();
+        }
         return view('pages.user-profile');
         //return $user;
         //return view('configuracion.aseguradoras.aseguradoras', compact('aseguradoras'));
     }
 }
+

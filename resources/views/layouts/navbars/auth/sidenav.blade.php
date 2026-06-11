@@ -6,8 +6,8 @@
         <a class="navbar-brand m-0" href="{{ route('home') }}"
             target="_blank">
             <!--<img src="./img/logo-ct-dark.png" class="navbar-brand-img h-120" alt="main_logo">-->
-            <img src="./img/1logo-ct-dark.png" class="navbar-brand-img h-120" alt="main_logo">
-            <span class="ms-1 font-weight-bold">Inversión PEMX</span>
+            <img src="./img/1logo-ct-dark2.jpeg" class="navbar-brand-img h-120" alt="main_logo">
+            <span class="ms-1 font-weight-bold">Capital One</span>
         </a>
     </div>
     <hr class="horizontal dark mt-0">
